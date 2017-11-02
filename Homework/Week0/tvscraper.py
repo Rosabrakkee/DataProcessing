@@ -28,17 +28,20 @@ def extract_tvseries(dom):
 
     for e in dom.by_tag("div.lister-item"):
 
+        # initiates value to unknown in case data is missing
+        title, rating, genres, stars, runtime = "unknown", "unknown", "unknown", "unknown", "unknown"
+
         # gets the  title
         title = e.by_tag("h3")[0].by_tag("a")[0].content.encode("utf-8")
 
-        # gets the genre 
+        # gets the genre and appends to string
         genres = e.by_tag("span.genre")[0].content                               
         genres = ",".join([genres.strip('\n').strip(' ')])
 
         # gets the rating
         rating = e.by_tag("span.value")[0].content
               
-        # gets the actors/actresses
+        # gets the actors/actresses and appends to string 
         stars = []
         for k in e.by_tag("p")[2].by_tag("a"):
             stars.append(k.content.encode("utf-8"))
