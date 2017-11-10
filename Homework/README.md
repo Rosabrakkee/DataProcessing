@@ -21,7 +21,7 @@ Creates a line graph from the average temperature data.
 ## Built With
 
 * [Python 2.7](https://docs.python.org/3/) - Programming Language
-* [Python 2.7](https://docs.python.org/3/) - Programming Language
+* Javascript
 
 ## Authors
 
