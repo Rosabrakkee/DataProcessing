@@ -15,7 +15,7 @@ window.onload = function () {
 
     // gets csv file
 		var response = this.responseText;
-    drawGraph(response)
+    drawGraph(response);
 	 }
   };
 
@@ -47,9 +47,9 @@ window.onload = function () {
   };
 
   // height, width and padding of graph
-  var width = 700
-  var height = 400
-  var start = 100
+  var width = 500;
+  var height = 300;
+  var start = 100;
 
   // gets highest temp and lowest temp of the dataset for domain
   var highestTemp = Math.max.apply(Math, temp);
@@ -58,14 +58,14 @@ window.onload = function () {
   var heightRange = [start, height];
 
   // gets first and last day of the dataset
-  var dayOne = date[0].getTime()
-  var dayLast = date[date.length - 1].getTime()
+  var dayOne = date[0].getTime();
+  var dayLast = date[date.length - 1].getTime();
   var domainDate = [dayOne, dayLast];
   var widthRange = [start, width];
 
   // creates transform fucntion for dates en temperatures
-  var dateFunc = createTransform(domainDate, widthRange)
-  var tempFunc = createTransform(domainTemp, heightRange)
+  var dateFunc = createTransform(domainDate, widthRange);
+  var tempFunc = createTransform(domainTemp, heightRange);
 
   // returns transform function to transform datapoint into pixel value
   function createTransform(domain, range){
@@ -76,14 +76,14 @@ window.onload = function () {
   // range_max = alpha * domain_max + beta
     // a solution would be:
 
-    var domain_min = domain[0]
-    var domain_max = domain[1]
-    var range_min = range[0]
-    var range_max = range[1]
+    var domain_min = domain[0];
+    var domain_max = domain[1];
+    var range_min = range[0];
+    var range_max = range[1];
 
     // formulas to calculate the alpha and the beta
-    var alpha = (range_max - range_min) / (domain_max - domain_min)
-    var beta = range_max - alpha * domain_max
+    var alpha = (range_max - range_min) / (domain_max - domain_min);
+    var beta = range_max - alpha * domain_max;
 
     // returns the function for the linear transformation (y = a * x + b)
     return function(x){
@@ -98,32 +98,32 @@ window.onload = function () {
   var title = "Maximum Temperature in De Bild (NL) from " + monthNames[date[0].getMonth()]
   + ", " + date[0].getFullYear() + " to " + monthNames[(date[date.length - 1].getMonth())]
   + ", " + date[date.length - 1].getFullYear();
-  var font = "12px Arial"
+  var font = "12px Arial";
 
   // start drawing the graph
   var canvas = document.getElementById('myCanvas');
   var ctx = canvas.getContext('2d');
   ctx.beginPath();
   ctx.font = font;
-  ctx.fillText(title, (width - start) / 2, start / 2)
+  ctx.fillText(title, start, start / 2);
 
   // create y-axis with rounded temperatures
-  var lowTempRound = (Math.round((lowestTemp - 10) / 10) * 10)
-  var startYaxis = tempFunc(lowTempRound)
-  var highTempRound = (Math.round((highestTemp + 10)/ 10) * 10)
-  var endYaxis = tempFunc(highTempRound)
-  var xPosYaxis = start - 10
+  var lowTempRound = (Math.round((lowestTemp - 10) / 10) * 10);
+  var startYaxis = tempFunc(lowTempRound);
+  var highTempRound = (Math.round((highestTemp + 10)/ 10) * 10);
+  var endYaxis = tempFunc(highTempRound);
+  var xPosYaxis = start - 10;
   ctx.moveTo(xPosYaxis, startYaxis);
   ctx.lineTo(xPosYaxis, endYaxis);
-  var interval = 10
-  var intervalPixelHeight = (startYaxis - endYaxis) / interval
+  var interval = 10;
+  var intervalPixelHeight = (startYaxis - endYaxis) / interval;
 
   // create data on y-axis
   for (i = 0; i < interval + 1; i++){
 
     // puts stripes on y-axis
-    ctx.moveTo(xPosYaxis, startYaxis - (i * intervalPixelHeight))
-    ctx.lineTo(xPosYaxis - stripes, startYaxis - (i * intervalPixelHeight))
+    ctx.moveTo(xPosYaxis, startYaxis - (i * intervalPixelHeight));
+    ctx.lineTo(xPosYaxis - stripes, startYaxis - (i * intervalPixelHeight));
 
     // puts average temp on y-axis
     ctx.font = font;
@@ -134,13 +134,13 @@ window.onload = function () {
   // create x-axis
   ctx.moveTo(start, startYaxis);
   ctx.lineTo(width, startYaxis);
-  var intervalPixelWidth = (width - start) / 12
-  var intervalDataDates = 12
+  var intervalPixelWidth = (width - start) / 12;
+  var intervalDataDates = 12;
   for (i = 0; i < 12; i++){
 
     // puts stripes on x-axis
-    ctx.moveTo(start + (i * intervalPixelWidth), startYaxis)
-    ctx.lineTo(start + (i * intervalPixelWidth), startYaxis + stripes)
+    ctx.moveTo(start + (i * intervalPixelWidth), startYaxis);
+    ctx.lineTo(start + (i * intervalPixelWidth), startYaxis + stripes);
 
     // puts average dates on x-axis
     ctx.font = font;
