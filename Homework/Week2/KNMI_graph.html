@@ -1,17 +1,9 @@
 <!--
 Rosa Brakkee
 HTML page displaying a graph of the average temperatures
-in de Bilt from 1 nov 2016 till 1 nov 2017.
+in de Bilt.
 
 # BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
-# STN      LON(east)   LAT(north)     ALT(m)  NAME
-# 260:         5.180       52.100       1.90  DE BILT
-#
-# YYYYMMDD = Datum (YYYY=jaar MM=maand DD=dag);
-# TG       = Etmaalgemiddelde temperatuur (in 0.1 graden Celsius);
-#
-# STN,YYYYMMDD,   TG
-#
 -->
 
 <!DOCTYPE html>
@@ -25,12 +17,7 @@ in de Bilt from 1 nov 2016 till 1 nov 2017.
   <p>BRON KNMI:</p>
   <a href="url">http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi</a>
   <canvas id="myCanvas" width="800" height="700"></canvas>
-  <!-- <body style="margin-left:50px;margin-top:50px;"> -->
   <script src="KNMI.js"></script>
-  <!-- <canvas id="canvas" width="800" height="600"></canvas> -->
-
   <textarea id="rawdata"></textarea>
-
 </body>
-
 </html>
