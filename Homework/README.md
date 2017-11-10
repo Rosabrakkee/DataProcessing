@@ -11,8 +11,9 @@ Code: python 2.7
 
 ### Week 2: KNMI HTML pagina
 Creates a line graph from the average temperature data.
-BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
-Code: javascript
+* BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
+* Code: javascript
+* Line graph: https://rosabrakkee.github.io/DataProcessing/
 
 ## Prerequisites
 - None
