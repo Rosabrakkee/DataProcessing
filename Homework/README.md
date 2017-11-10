@@ -7,10 +7,12 @@ This is all homework for the course DataProcessing, sorted by week.
 ### Week 0: TVscrapper
 Scraps the top50 tv series of IMDB.
 BRON: IMDB
+Code: python 2.7
 
 ### Week 2: KNMI HTML pagina
 Creates a line graph from the average temperature data.
 BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
+Code: javascript
 
 ## Prerequisites
 - None
