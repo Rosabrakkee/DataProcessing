@@ -21,8 +21,6 @@ Creates a barchart for the CO2 emission in different countries
 * Code: Javascript
 * Source: Netherlands Environmental Assessment Agency
 
-# Design
-
 ## Prerequisites
 - None
 
@@ -31,7 +29,11 @@ Creates a barchart for the CO2 emission in different countries
 * [Python 2.7](https://docs.python.org/3/) - Programming Language
 * Javascript
 
-## Authors
+# Design
+
+Nothing published yet
+
+# Authors
 
 Rosa Brakkee 
 10777601
