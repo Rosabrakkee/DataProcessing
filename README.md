@@ -1,8 +1,10 @@
-# Homework DataProcessing
+# DataProcessing course
 
-This is all homework for the course DataProcessing, sorted by week.
+This is all homework for the course DataProcessing and the design assignment.
 
-## Assignments by week
+# Homework
+
+Link to home work:  https://rosabrakkee.github.io/DataProcessing/
 
 ### Week 0: TVscrapper
 Scraps the top50 tv series of IMDB.
@@ -11,15 +13,15 @@ Code: python 2.7
 
 ### Week 2: KNMI line graph
 Creates a line graph from the average temperature data.
-* Line graph: https://rosabrakkee.github.io/DataProcessing/
 * Code: javascript
 * Source: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
 
 ### Week 3: Barchart CO2 emission
 Creates a barchart for the CO2 emission in different countries
-* Barchart: https://rosabrakkee.github.io/DataProcessing/
 * Code: Javascript
 * Source: Netherlands Environmental Assessment Agency
+
+# Design
 
 ## Prerequisites
 - None
