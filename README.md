@@ -21,6 +21,11 @@ Creates a barchart for the CO2 emission in different countries
 * Code: Javascript
 * Source: Netherlands Environmental Assessment Agency
 
+### Week 4: Scatterplot CO2 emission and renewable energy
+Creates a scatterplot for the CO2 emission vs. %-renewable energy in different countries
+* Code: Javascript
+* Source: Netherlands Environmental Assessment Agency
+
 ## Prerequisites
 - None
 
