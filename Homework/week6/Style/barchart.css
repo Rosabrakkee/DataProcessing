@@ -1,0 +1,42 @@
+/**Rosa Brakkee
+*
+*DataProc week3
+*CSS file for displaying a barchart
+**/
+/*The color of the bars*/
+
+.barchart {
+    fill: lightsteelblue;
+}
+
+/*The color of the bars on hover*/
+.barchart:hover {
+    fill: blue;
+}
+
+/*The font on the axis*/
+.axis {
+    font: 12px sans-serif;
+}
+
+/*The format of the axis*/
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+/*The tool tip that appears on hovering over a bar*/
+.d3-tip {
+    color: white;
+    font: 12px sans-serif;
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    width: 60px;
+    height: 15px;
+    padding: 1px;
+    border: 5px;
+    border-radius: 8px;
+}
