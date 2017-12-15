@@ -9,11 +9,6 @@
     fill: lightsteelblue;
 }
 
-/*The color of the bars on hover*/
-.barchart:hover {
-    fill: blue;
-}
-
 /*The font on the axis*/
 .axis {
     font: 12px sans-serif;
